@@ -1,0 +1,109 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color: pink;
+}
+
+/* Navbar */
+.navbar{
+    display: flex;
+    background: white;
+    position:sticky;
+    height: 80px;
+}
+
+.personal{
+ display: flex;
+}
+
+ul{
+    display: flex;
+    margin: 10px 10px;
+    align-items: center;
+}
+
+li{
+    display: inline-block;
+    align-items: center;
+    padding: 5px;
+}
+
+a{
+    display: inline-block;
+    padding: 5px;
+}
+
+img{
+    height: 50px;
+    width: 50px;
+}
+
+.social{
+    display: flex;
+    margin-left: auto; 
+}
+
+/* Project */
+.project{
+    display:flex;
+    flex-direction:column;
+}
+
+.project ul{
+    display: flex;
+    flex-direction: column;
+    
+    opacity:1;
+}
+
+@keyframes rotate{
+    0%{
+       opacity:0;
+       filter:blur(10px);
+       transform:translateX(80%);
+    }
+    25%{
+        opacity:0.2;
+        filter:blur(8px);
+        transform:translateX(40%);
+     }
+     50%{
+        opacity:0.4;
+        filter:blur(6px);
+        transform:translateX(20%);
+     }
+    75%{
+        opacity:0.6;
+        filter:blur(4px);
+        transform:translateX(10%);
+     }
+     100%{
+        opacity:1;
+        filter:blur(0px);
+        transform:translateX(0);
+     }
+}
+
+.project ul li{
+    display: block;
+    border: 5px rgb(233, 178, 178) solid;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    background-color: #fff;
+    
+    
+}
+
+.project ul li a{
+    align-items: center;
+    font-size: xx-large;
+}
+
+.project ul li a img{
+    height: 300px;
+    width: 300px;
+    animation:rotate 2s ease;
+}

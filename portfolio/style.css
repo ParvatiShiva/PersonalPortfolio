@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #000;
+    color: white;
+}
+
+/* Navbar */
+.navbar{
+    display: flex;
+    background: white;
+    position:sticky;
+    height: 80px;
+    width: 100%;
+}
+
+.personal{
+ display: flex;
+}
+
+ul{
+    display: flex;
+    margin: 10px 10px;
+    align-items: center;
+}
+
+li{
+    display: inline-block;
+    align-items: center;
+    padding: 5px;
+}
+
+a{
+    display: inline-block;
+    padding: 5px;
+}
+
+img{
+    height: 50px;
+    width: 50px;
+}
+
+.social{
+    display: flex;
+    margin-left: auto; 
+}
+
+
+
+
+/*  Section */
+.name section{
+    height: 100vh;
+    background: #000;
+}
+.name section::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right , #f00,#f00,#0f0,#0ff,#ff0,#0ff);
+    mix-blend-mode: color;
+    pointer-events: none;
+}
+.name section video{
+    object-fit: cover; 
+}
+.name section h1{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 5em;
+    font-family: sans-serif;
+    letter-spacing: 0.2em;
+}
+
+.name section span{
+    opacity: 0;
+    display: inline-block;
+    animation: animate1 1s linear forwards;
+    filter:blur(1px);
+}
+
+@keyframes animate1{
+    0%{
+        opacity:0;
+        transform: rotateY(90deg);
+        filter: blur(10px);
+    }
+    100%{
+        opacity:1;
+        transform: rotateY(0deg);
+        filter: blur(0);
+    }
+}
+
+h1 span:nth-child(1){
+    animation-delay: 1s;
+}
+h1 span:nth-child(2){
+    animation-delay: 2s;
+}
+h1 span:nth-child(3){
+    animation-delay: 2.5s;
+}
+h1 span:nth-child(4){
+    animation-delay: 3s;
+}
+h1 span:nth-child(5){
+    animation-delay: 3.5s;
+}
+h1 span:nth-child(6){
+    animation-delay: 4s;
+}
+h1 span:nth-child(7){
+    animation-delay: 4.5s;
+}
+h1 span:nth-child(8){
+    animation-delay: 4.5s;
+}
+h1 span:nth-child(9){
+    animation-delay: 5s;
+}
+
+
+/* ---------------- 530px -------------------*/
+
+@media (min-width:530px){
+    .name section h1{
+        top: 30%;
+        font-size: 3em;
+        letter-spacing: 0.4em;
+    }
+
+}
+
+/* -------------- 800 px --------------*/
+
+@media (min-width: 800px){
+    .name section h1{
+        top: 35%;
+        font-size: 3.5em;
+        letter-spacing: 0.2em;
+    }
+}
+
+/* ------------------ 1024px --------*/
+@media (min-width: 1024px){
+    .name section h1{
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 60%;
+        transform: translateY(-50%);
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font-size: 5em;
+        font-family: sans-serif;
+        letter-spacing: 0.2em;
+    }
+}
